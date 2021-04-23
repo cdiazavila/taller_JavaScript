@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>TEST</title>   
+    
+    <script type="text/Javascript" src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>TEST DE CALCULO DIFERENCIAL</h1>
+    </header>
+    <nav id="nav">
+        <input type="button" value="Salir" id="salir">
+        <div id="informacion"></div>
+         <div id="nota"></div>
+        <div id="idpregunta"></div>
+    </nav>
+   
+    
+       <div id="login">
+    <form action="" method="POST" id="formulario" onsubmit="return false;">
+        <legend>INGRESE LOS DATOS</legend>
+        <label for="name">Nombres</label>
+        <input type="text" name="name" id="name" placeholder="Nombres" data-validation="required"><br>
+        <label for="ape">Apellidos</label>
+        <input type="text" name="ape" id="ape" placeholder="Apellidos" data-validation="required"><br><br>
+
+        <input type="button" value="Registrarse" id="registro" onclick="registrar();"/>
+    </form>
+
+</div>
+
+<div id="container">
+
+    <section id="p1">
+        <h2>PREGUNTA 1 de 9</h2>
+        <p> Cual es la √2 ?</p>
+        
+           <form action="post" name="radio">
+            <input type="radio" name="opcion" id="opcion1" value="1"><label for="1">2.5</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="2"><label for="2" id="label">1.44</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="3"><label for="3">1</label>
+           
+        </form>
+        <div id="r1">
+
+        </div>
+        
+            <div id="menu1">
+                <ul>
+             
+              <li onclick="pregunta(2)">Siguiente</li>
+            </ul> 
+          </div>
+         
+        
+       
+    </section>
+
+    <section id="p2">
+        <h2>PREGUNTA 2 de 9</h2>
+        <p> Cuanto es 34-30 ?</p>
+        
+           <form action="post" name="radio2">
+            <input type="radio" name="opcion" id="opcion1" value="4"><label for="1">4</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="7"><label for="2" id="label">7</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="8"><label for="3">8</label>
+           
+        </form>
+        <div id="r2">
+
+        </div>
+        <div id="menu2">
+            <ul>
+          <li onclick="pregunta(1)">Anterior</li>
+          <li onclick="pregunta(3)">Siguiente</li>
+        </ul> 
+      </div>
+    </section>
+
+    <section id="p3">
+        <h2>PREGUNTA 3 de 9</h2>
+        <p> Cual es el dominio de la Raiz x+1 ?</p>
+        
+           <form action="post" name="radio3">
+            <input type="radio" name="opcion" id="opcion1" value="1"><label for="1">(-1,0)u(0,10)</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="2"><label for="2" id="label">|R -{-1)</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="3"><label for="3">(-1,∞)</label>
+           
+        </form>
+        <div id="r3">
+
+        </div>
+        <div id="menu3">
+            <ul>
+          <li onclick="pregunta(2)">Anterior</li>
+          <li onclick="pregunta(4)">Siguiente</li>
+        </ul> 
+      </div>
+    </section>
+
+    <section id="p4">
+        <h2>PREGUNTA 4 de 9</h2>
+        <p> Cual de estos numero es primo?</p>
+        
+           <form action="post" name="radio4">
+            <input type="radio" name="opcion" id="opcion1" value="1"><label for="1">0</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="2"><label for="2" id="label">7</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="3"><label for="3">10</label>
+           
+        </form>
+        <div id="r4">
+
+        </div>
+
+        <div id="menu4">
+            <ul>
+          <li onclick="pregunta(3)">Anterior</li>
+          <li onclick="pregunta(5)">Siguiente</li>
+        </ul> 
+      </div>
+    </section>
+
+    <section id="p5">
+        <h2>PREGUNTA 5 de 9</h2>
+        <p> La variable x perteneciente al dominio de la función recibe el nombre de variable independiente. ?</p>
+        
+           <form action="post" name="radio5">
+            <input type="radio" name="opcion" id="opcion1" value="1"><label for="1">Falso</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="2"><label for="2" id="label">nul</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="3"><label for="3">Verdadero</label>
+           
+        </form>
+        <div id="r5">
+
+        </div>
+
+        <div id="menu5">
+            <ul>
+          <li onclick="pregunta(4)">Anterior</li>
+          <li onclick="pregunta(6)">Siguiente</li>
+        </ul> 
+      </div>
+    </section>
+
+    <section id="p6">
+        <h2>PREGUNTA 6 de 9</h2>
+        <p> Hallar el dominio de la  f(x)=(x^{2}-25)/5 ?</p>
+        
+           <form action="post" name="radio6">
+            <input type="radio" name="opcion" id="opcion1" value="1"><label for="1">7</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="2"><label for="2" id="label">|R</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="3"><label for="3">[2,9]</label>
+           
+        </form>
+        <div id="r6">
+
+        </div>
+        <div id="menu6">
+            <ul>
+          <li onclick="pregunta(5)">Anterior</li>
+          <li onclick="pregunta(7)">Siguiente</li>
+        </ul> 
+      </div>
+
+    </section>
+
+    <section id="p7">
+        <h2>PREGUNTA 7 de 9</h2>
+        <p> Cual es el valor 10^7 ?</p>
+        
+           <form action="post" name="radio7">
+            <input type="radio" name="opcion" id="opcion1" value="1"><label for="1">10000000</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="2"><label for="2" id="label">1000000</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="3"><label for="3">20000000</label>
+           
+        </form>
+        <div id="r7">
+
+        </div>
+        <div id="menu7">
+            <ul>
+          <li onclick="pregunta(6)">Anterior</li>
+          <li onclick="pregunta(8)">Siguiente</li>
+        </ul> 
+      </div>
+    </section>
+
+    <section id="p8">
+        <h2>PREGUNTA 8 de 9</h2>
+        <p> ¿ A cuánto equivale la siguiente expresión 10^-4?</p>
+        
+           <form action="post" name="radio8">
+            <input type="radio" name="opcion" id="opcion1" value="1"><label for="1">0.0001</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="2"><label for="2" id="label">1.56</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="3"><label for="3">0.001</label>
+           
+        </form>
+        <div id="r8">
+
+        </div>
+        <div id="menu8">
+            <ul>
+          <li onclick="pregunta(7)">Anterior</li>
+          <li onclick="pregunta(9)">Siguiente</li>
+        </ul> 
+      </div>
+    </section>
+
+    <section id="p9">
+        <h2>PREGUNTA 9 de 9</h2>
+        <p>¿Cuál es el resultado de la siguiente expresión 27x10^3?</p>
+        
+           <form action="post" name="radio9">
+            <input type="radio" name="opcion" id="opcion1" value="1"><label for="1">2700</label><br><br>
+            <input type="radio" name="opcion" id="opcion2" value="2"><label for="2" id="label">270000</label><br><br>
+            <input type="radio" name="opcion" id="opcion3" value="3"><label for="3">27000</label>
+           
+        </form>
+        <div id="r9">
+
+        </div>
+        <div id="menu9">
+            <ul>
+          <li onclick="pregunta(8)">Anterior</li>
+         
+        </ul> 
+      </div>
+    </section>
+    </div>
+     <div id="panel">
+      <button type="button" id="boton1">1 </button>
+      <button type="button" id="boton2">2 </button>
+      <button type="button" id="boton3">3 </button>
+      <button type="button" id="boton4">4</button>
+      <button type="button" id="boton5">5</button>
+      <button type="button" id="boton6">6</button>
+      <button type="button" id="boton7">7</button>
+      <button type="button" id="boton8">8</button>
+      <button type="button" id="boton9">9</button>
+     </div>
+    <button type="button" id="terminar">Terminar </button>
+
+
+    <footer>
+     <p> <h3>universidad de cordoba @todo los derechos reservados</h3></p>
+    </footer>
+
+   
+    <script src="js/Script.js"></script>
+
+</body>
+</html>
